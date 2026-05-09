@@ -6,12 +6,12 @@ const config: Config = {
     extend: {
       colors: {
         paper: {
-          DEFAULT: "#F7F3EA",
-          warm: "#F6F1E8",
-          cool: "#F7F3EA",
+          DEFAULT: "#FAF8F3",
+          warm: "#F9F6F0",
+          cool: "#FAF8F3",
           edge: "#F0E9D8",
         },
-        bg: "#F7F3EA",
+        bg: "#FAF8F3",
         surface: "#FDFAF4",
         border: "#E3D8C8",
         ink: {

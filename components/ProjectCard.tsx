@@ -55,15 +55,15 @@ export default function ProjectListItem({ project, active, onClick }: Props) {
         <div className="mt-2.5 flex flex-wrap gap-1">
           {project.tags.map((tag) => (
             <span
-              key={tag}
+              key={tag.label}
               className="inline-block rounded-full px-2 py-1 text-[9px] font-medium uppercase tracking-label"
               style={{
-                backgroundColor: `${meta.accent}15`,
-                color: meta.accent,
+                backgroundColor: `${tag.color}20`,
+                color: tag.color,
                 opacity: active ? 1 : 0.6,
               }}
             >
-              {tag}
+              {tag.label}
             </span>
           ))}
         </div>

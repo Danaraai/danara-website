@@ -90,11 +90,11 @@ export default function ProjectsSection() {
         </Reveal>
 
         {/* Master-detail */}
-        <div className="grid grid-cols-12 gap-x-8 gap-y-8 lg:gap-x-12">
+        <div className="grid grid-cols-12 gap-x-8 gap-y-8 lg:gap-x-16">
           {/* Left rail — vertical on md+, horizontal scroll on mobile */}
           <nav
             aria-label="Projects"
-            className="col-span-12 md:col-span-4 lg:col-span-3"
+            className="col-span-12 md:col-span-3 lg:col-span-3"
           >
             <div className="lg:sticky lg:top-24">
               <ul
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
           </nav>
 
           {/* Right pane — detail */}
-          <div className="col-span-12 md:col-span-8 lg:col-span-9">
+          <div className="col-span-12 md:col-span-9 lg:col-span-9">
             {selected && <ProjectDetail project={selected} />}
           </div>
         </div>

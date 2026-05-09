@@ -20,6 +20,11 @@ export type VideoEmbed = {
   label?: string;
 };
 
+export type Tag = {
+  label: string;
+  color: string;
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -31,7 +36,7 @@ export type Project = {
   outcome: string;
   role?: string;
   stack: string[];
-  tags?: string[];
+  tags?: Tag[];
   featured?: boolean;
   links: {
     github?: string;
@@ -77,7 +82,12 @@ export const projects: Project[] = [
     year: "2026",
     context: "hackathon",
     featured: true,
-    tags: ["agentic AI", "multimodal", "collaboration", "real-time"],
+    tags: [
+      { label: "agentic AI", color: "#9B7AE5" },
+      { label: "multimodal", color: "#7DAFD3" },
+      { label: "collaboration", color: "#D4A8BC" },
+      { label: "real-time", color: "#F5A962" },
+    ],
     problem:
       "PRs show what was built. They never show why. And when two engineers use AI agents on the same project, all of that reasoning is invisible to everyone else on the team.",
     built:
@@ -123,7 +133,11 @@ export const projects: Project[] = [
     pillar: "apps",
     year: "2025 — 2026",
     context: "side project",
-    tags: ["education", "spaced repetition", "interactive learning", "neuroscience"],
+    tags: [
+      { label: "AI-coded app", color: "#9B7AE5" },
+      { label: "spaced repetition", color: "#7DAFD3" },
+      { label: "neuroscience", color: "#BD8AA0" },
+    ],
     problem:
       "Learning computational neuroscience from textbooks is dense and dry. I wanted something fun and interactive — closer to Duolingo than a 600-page PDF.",
     built:
@@ -157,7 +171,11 @@ export const projects: Project[] = [
     context: "hackathon · partnered with Amazon AI advisors",
     role: "Product + AI logic",
     featured: true,
-    tags: ["agentic AI", "e-commerce", "multi-agent", "market research"],
+    tags: [
+      { label: "agentic AI", color: "#9B7AE5" },
+      { label: "multi-agent", color: "#7DAFD3" },
+      { label: "market research", color: "#94BAA8" },
+    ],
     problem:
       "80% of new apparel SKUs fail, and mistimed launches cause customer churn. Small Shopify founders have to weigh historical sales, seasonality, trending colors, and customer demographics in their head — one of the most expensive and uncertain decisions in e-commerce.",
     built:
@@ -205,7 +223,10 @@ export const projects: Project[] = [
     pillar: "automation",
     year: "2026",
     context: "internal tool",
-    tags: ["automation", "supply chain", "internal tools", "workflow"],
+    tags: [
+      { label: "AI automation", color: "#9B7AE5" },
+      { label: "supply chain", color: "#7DAFD3" },
+    ],
     problem:
       "Onboarding new wholesale customers required manual coordination across multiple internal systems before a new account could place its first order — slow, repetitive, and error-prone.",
     built:
@@ -227,7 +248,12 @@ export const projects: Project[] = [
     pillar: "automation",
     year: "2025",
     context: "internal tool · 3PL operations",
-    tags: ["automation", "operations", "billing", "prompt engineering"],
+    tags: [
+      { label: "automation", color: "#9B7AE5" },
+      { label: "operations", color: "#7DAFD3" },
+      { label: "billing", color: "#94BAA8" },
+      { label: "prompt engineering", color: "#F5A962" },
+    ],
     problem:
       "Our warehouse transitioned to a 3PL business model, taking on external brand fulfillment. We needed a scalable billing system to invoice clients across four service categories — fulfillment, receiving, storage, and value-added services — that consolidated PowerBI exports, WRO logs, and storage tracking into client-ready invoices, automatically.",
     built:
