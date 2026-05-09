@@ -169,11 +169,9 @@ export const projects: Project[] = [
       { label: "agentic RAG", color: "#F5A962" },
     ],
     problem:
-      "Learning computational neuroscience from textbooks is dense and dry. Most tools are either too academic or too simplified. I wanted something engaging and interactive — closer to Duolingo than a 600-page PDF, with the ability to ask questions and get contextual answers.",
+      "I'm learning computational neuroscience, working through a 600+ page textbook that covers linear algebra, Python, and deep theoretical concepts. It's incredibly dense and difficult. So I built a Duolingo-style learning app with spaced repetition to make it interactive and fun. Now I'm adding a RAG feature — basically AI talking to AI — so you can ask the app questions and get contextual answers grounded in the lesson material.",
     built:
-      "A maze-like treasure hunt with a deer mascot (Ilya) guiding you through lessons on neural coding, learning, and computation. Every concept is followed by an immediate quiz to prevent passive reading. Spaced repetition brings cards back when you're about to forget them. Built as a Next.js 16 PWA with client-side Python execution via Pyodide for interactive code examples and simulations. Progress persists via localStorage. Currently shipping an agentic RAG Chat feature using Supabase pgvector for semantic lesson search and Fireworks AI with Llama 3.3 70B to synthesize explanations grounded in the course material.",
-    outcome:
-      "Live and widely used by neuroscience students and researchers. The spaced repetition engine has helped hundreds of learners retain complex computational concepts. The RAG chat feature is now the most-used tool in the app — learners ask questions and get answers sourced from lesson content with full citations.",
+      "A maze-like treasure hunt with a deer mascot (Ilya) guiding you through lessons. Every concept is followed by an immediate quiz. Spaced repetition brings cards back when you're about to forget them. Built with Next.js, Pyodide for Python execution in the browser, and Zustand for state. Now shipping: agentic RAG chat using Supabase pgvector and Fireworks AI for semantic search and synthesis.",
     stack: [
       "Next.js 16",
       "TypeScript",
@@ -188,31 +186,8 @@ export const projects: Project[] = [
     links: {
       demo: "https://neuroquest-psi.vercel.app/",
     },
-    images: ["/neuroquest-architecture.png"],
-    architecture: {
-      nodes: [
-        { id: "ui", label: "Next.js PWA", kind: "ui" },
-        { id: "state", label: "Zustand store", kind: "db" },
-        { id: "sr", label: "Spaced repetition", kind: "agent" },
-        { id: "content", label: "Lesson content", kind: "db" },
-        { id: "python", label: "Pyodide (Python)", kind: "agent" },
-        { id: "supabase", label: "Supabase pgvector", kind: "db" },
-        { id: "llm", label: "Fireworks Llama 3.3", kind: "llm" },
-        { id: "rag", label: "RAG Chat", kind: "agent" },
-      ],
-      edges: [
-        { from: "ui", to: "state", label: "progress" },
-        { from: "content", to: "ui", label: "lessons" },
-        { from: "state", to: "sr", label: "review queue" },
-        { from: "sr", to: "ui", label: "due cards" },
-        { from: "ui", to: "python", label: "simulations" },
-        { from: "content", to: "supabase", label: "embeddings" },
-        { from: "ui", to: "rag", label: "query" },
-        { from: "supabase", to: "rag", label: "context" },
-        { from: "rag", to: "llm", label: "prompt" },
-        { from: "llm", to: "ui", label: "answer" },
-      ],
-    },
+    images: ["/neuroquest-ui.png"],
+    architecture: { nodes: [], edges: [] },
   },
   {
     id: "npd-assistant",
