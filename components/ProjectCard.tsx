@@ -17,11 +17,12 @@ export default function ProjectListItem({ project, active, onClick }: Props) {
       type="button"
       onClick={onClick}
       aria-current={active ? "true" : undefined}
-      className="group block w-full min-w-[210px] py-3.5 pl-4 pr-3 text-left transition md:min-w-0 md:py-4"
+      className="group block w-full min-w-[210px] py-4 pl-4 pr-3 text-left transition md:min-w-0 md:py-5"
       style={{
         borderLeft: active
           ? `2px solid ${meta.accent}`
           : "2px solid transparent",
+        backgroundColor: active ? "rgba(155, 122, 229, 0.04)" : "transparent",
       }}
     >
       <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-eyebrow text-ink-muted">

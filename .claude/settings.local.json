@@ -14,7 +14,10 @@
       "Bash(kill 40460)",
       "mcp__Claude_Preview__preview_start",
       "Bash(grep -oE '\"text\":\"[^\"]{0,400}\"' /Users/danara/.claude/projects/-Users-danara-Vibecoding-Danara-Website/4c9df74b-bc36-4bac-bd49-61ebccc18147/tool-results/mcp-Claude_Preview-preview_console_logs-1778219412586.txt)",
-      "Bash(npx vercel *)"
+      "Bash(npx vercel *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
