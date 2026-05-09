@@ -102,26 +102,7 @@ export const projects: Project[] = [
         "https://www.notion.so/Danara-s-AI-Projects-Portfolio-73fda0197f564f80820f1c0fa8950cea",
     },
     images: ["/nordstrom-architecture.png"],
-    architecture: {
-      nodes: [
-        { id: "nordstrom", label: "Nordstrom", kind: "api" },
-        { id: "mirakl", label: "Mirakl Connect", kind: "api" },
-        { id: "shopify", label: "Shopify", kind: "api" },
-        { id: "flow", label: "Shopify Flow", kind: "agent" },
-        { id: "redo", label: "Redo WMS", kind: "api" },
-        { id: "agent", label: "TN Agent", kind: "agent" },
-        { id: "shipbob", label: "ShipBob", kind: "api" },
-      ],
-      edges: [
-        { from: "nordstrom", to: "mirakl", label: "return approved" },
-        { from: "mirakl", to: "shopify", label: "sync" },
-        { from: "shopify", to: "flow", label: "trigger" },
-        { from: "flow", to: "redo", label: "create RMA" },
-        { from: "agent", to: "shopify", label: "get order" },
-        { from: "agent", to: "mirakl", label: "get TN" },
-        { from: "agent", to: "shipbob", label: "update RMA" },
-      ],
-    },
+    architecture: { nodes: [], edges: [] },
   },
   {
     id: "hive",
