@@ -8,15 +8,15 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative px-6 pb-16 pt-28 md:px-10 md:pb-20 md:pt-36"
+      className="relative pb-16 pt-28 md:pb-20 md:pt-36"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-3xl px-6 md:px-10 text-center">
         <motion.div
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
           animate={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="max-w-[60ch] text-[20px] leading-[1.55] text-ink md:text-[22px]">
+          <p className="text-[20px] leading-[1.55] text-ink md:text-[22px]">
             Hi, I&rsquo;m{" "}
             <span className="font-medium">Danara</span> &mdash; I build
             AI-powered systems for real-world problems. At work, I automate
@@ -24,13 +24,13 @@ export default function Hero() {
             side, I geek out about AI infra and neuroscience.
           </p>
 
-          <p className="mt-8 max-w-[64ch] font-serif text-[15.5px] italic leading-[1.65] text-ink-muted md:text-[16px]">
-            Looking back at the projects I&rsquo;ve built &mdash; across my
-            career and on free time &mdash; the common thread is that I love
-            building and exploring systems, understanding dependencies.
-            That&rsquo;s why I love automating supply chain processes,
-            building agentic AI, understanding inference infrastructure, and
-            taking neuroscience courses on the side. All of it fascinates me.
+          <p className="mt-8 font-serif text-[15.5px] italic leading-[1.65] text-ink-muted md:text-[16px]">
+            The common thread across my work is systems. I like
+            understanding how complex parts connect &mdash; then turning
+            that complexity into automation, infrastructure, and intelligent
+            workflows. That&rsquo;s what draws me to supply chain
+            automation, agentic AI, inference infrastructure, and
+            neuroscience.
           </p>
 
           <p className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13.5px] text-ink-muted">
