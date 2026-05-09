@@ -31,6 +31,7 @@ export type Project = {
   outcome: string;
   role?: string;
   stack: string[];
+  tags?: string[];
   featured?: boolean;
   links: {
     github?: string;
@@ -76,6 +77,7 @@ export const projects: Project[] = [
     year: "2026",
     context: "hackathon",
     featured: true,
+    tags: ["agentic AI", "multimodal", "collaboration", "real-time"],
     problem:
       "PRs show what was built. They never show why. And when two engineers use AI agents on the same project, all of that reasoning is invisible to everyone else on the team.",
     built:
@@ -121,6 +123,7 @@ export const projects: Project[] = [
     pillar: "apps",
     year: "2025 — 2026",
     context: "side project",
+    tags: ["education", "spaced repetition", "interactive learning", "neuroscience"],
     problem:
       "Learning computational neuroscience from textbooks is dense and dry. I wanted something fun and interactive — closer to Duolingo than a 600-page PDF.",
     built:
@@ -154,6 +157,7 @@ export const projects: Project[] = [
     context: "hackathon · partnered with Amazon AI advisors",
     role: "Product + AI logic",
     featured: true,
+    tags: ["agentic AI", "e-commerce", "multi-agent", "market research"],
     problem:
       "80% of new apparel SKUs fail, and mistimed launches cause customer churn. Small Shopify founders have to weigh historical sales, seasonality, trending colors, and customer demographics in their head — one of the most expensive and uncertain decisions in e-commerce.",
     built:
@@ -201,6 +205,7 @@ export const projects: Project[] = [
     pillar: "automation",
     year: "2026",
     context: "internal tool",
+    tags: ["automation", "supply chain", "internal tools", "workflow"],
     problem:
       "Onboarding new wholesale customers required manual coordination across multiple internal systems before a new account could place its first order — slow, repetitive, and error-prone.",
     built:
@@ -222,6 +227,7 @@ export const projects: Project[] = [
     pillar: "automation",
     year: "2025",
     context: "internal tool · 3PL operations",
+    tags: ["automation", "operations", "billing", "prompt engineering"],
     problem:
       "Our warehouse transitioned to a 3PL business model, taking on external brand fulfillment. We needed a scalable billing system to invoice clients across four service categories — fulfillment, receiving, storage, and value-added services — that consolidated PowerBI exports, WRO logs, and storage tracking into client-ready invoices, automatically.",
     built:

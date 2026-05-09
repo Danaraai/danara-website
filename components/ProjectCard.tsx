@@ -50,6 +50,24 @@ export default function ProjectListItem({ project, active, onClick }: Props) {
       >
         {meta.label.toLowerCase()}
       </span>
+
+      {project.tags && project.tags.length > 0 && (
+        <div className="mt-2.5 flex flex-wrap gap-1">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-block rounded-full px-2 py-1 text-[9px] font-medium uppercase tracking-label"
+              style={{
+                backgroundColor: `${meta.accent}15`,
+                color: meta.accent,
+                opacity: active ? 1 : 0.6,
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
     </button>
   );
 }
