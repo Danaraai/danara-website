@@ -78,7 +78,7 @@ export const pillarMeta: Record<
 export const projects: Project[] = [
   {
     id: "nordstrom-returns",
-    title: "Nordstrom Returns — Agentic AI Automation",
+    title: "Nordstrom Returns — Agentic AI Automation on Fragmented Tech Stack",
     pillar: "automation",
     year: "2026",
     context: "internal tool",
