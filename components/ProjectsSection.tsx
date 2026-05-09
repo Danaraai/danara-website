@@ -57,7 +57,7 @@ export default function ProjectsSection() {
     visible.find((p) => p.id === selectedId) ?? visible[0] ?? projects[0];
 
   return (
-    <section id="work" className="relative pb-32 pt-4 md:pb-40 md:pt-6">
+    <section id="work" className="relative pb-32 pt-2 md:pb-40 md:pt-3">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="mb-8 h-px w-16 bg-border" aria-hidden />
 
