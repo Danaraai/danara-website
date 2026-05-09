@@ -76,6 +76,52 @@ export const pillarMeta: Record<
 // go — fill in before publishing.
 export const projects: Project[] = [
   {
+    id: "nordstrom-returns",
+    title: "Nordstrom Returns — Agentic AI Automation",
+    pillar: "automation",
+    year: "2026",
+    context: "internal tool",
+    featured: true,
+    tags: [
+      { label: "agentic AI", color: "#9B7AE5" },
+      { label: "automation", color: "#7DAFD3" },
+      { label: "supply chain", color: "#94BAA8" },
+      { label: "API orchestration", color: "#F5A962" },
+    ],
+    problem:
+      "We sell on Nordstrom through Mirakl Connect (dropship layer). When a customer returns a product, the return flows through Nordstrom → Mirakl → Shopify — but nothing automatically notified our WMS (Redo for returns). Parcels arrived at FC with no record, causing inventory inaccuracy and manual ops overhead. The challenge: a fragmented tech stack across four disconnected systems with no native integration.",
+    built:
+      "Two-layer solution: (1) Shopify Flow automation that triggers when Nordstrom approves a return and automatically creates a WMS RMA via Redo's API. (2) A daily autonomous agent that bridges the tracking number gap — it pulls open ShipBob RMAs with no TN, looks up the Shopify order to get the Mirakl order ID (stored in tags), calls Mirakl API to retrieve the carrier TN, and updates ShipBob RMA with it. Warehouse can now scan and receive every Nordstrom return normally.",
+    outcome:
+      "Eliminated manual parcel matching at FC. Returns now flow end-to-end without ops overhead. Inventory accuracy improved across all Nordstrom returns. Agent runs daily, 100% autonomous.",
+    role: "Product + Automation Lead",
+    stack: ["Shopify Flow", "Redo API", "Mirakl API", "ShipBob API", "Node.js"],
+    links: {
+      notion:
+        "https://www.notion.so/Danara-s-AI-Projects-Portfolio-73fda0197f564f80820f1c0fa8950cea",
+    },
+    architecture: {
+      nodes: [
+        { id: "nordstrom", label: "Nordstrom", kind: "api" },
+        { id: "mirakl", label: "Mirakl Connect", kind: "api" },
+        { id: "shopify", label: "Shopify", kind: "api" },
+        { id: "flow", label: "Shopify Flow", kind: "agent" },
+        { id: "redo", label: "Redo WMS", kind: "api" },
+        { id: "agent", label: "TN Agent", kind: "agent" },
+        { id: "shipbob", label: "ShipBob", kind: "api" },
+      ],
+      edges: [
+        { from: "nordstrom", to: "mirakl", label: "return approved" },
+        { from: "mirakl", to: "shopify", label: "sync" },
+        { from: "shopify", to: "flow", label: "trigger" },
+        { from: "flow", to: "redo", label: "create RMA" },
+        { from: "agent", to: "shopify", label: "get order" },
+        { from: "agent", to: "mirakl", label: "get TN" },
+        { from: "agent", to: "shipbob", label: "update RMA" },
+      ],
+    },
+  },
+  {
     id: "hive",
     title: "Hive — Multiplayer AI Coding",
     pillar: "apps",
