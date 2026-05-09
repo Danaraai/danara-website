@@ -44,6 +44,7 @@ export type Project = {
     writeup?: string;
     deck?: string;
     sheet?: string;
+    notion?: string;
   };
   video?: VideoEmbed;
   images?: string[];
