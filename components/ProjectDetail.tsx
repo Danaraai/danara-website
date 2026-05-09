@@ -14,7 +14,8 @@ export default function ProjectDetail({ project }: { project: Project }) {
     !!project.links.demo ||
     !!project.links.writeup ||
     !!project.links.deck ||
-    !!project.links.sheet;
+    !!project.links.sheet ||
+    !!project.links.notion;
 
   return (
     <motion.article
@@ -48,6 +49,28 @@ export default function ProjectDetail({ project }: { project: Project }) {
       <Section label="outcome">{project.outcome}</Section>
 
       {project.video && <VideoBlock video={project.video} />}
+
+      {project.images && project.images.length > 0 && (
+        <div className="mt-10">
+          <p className="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">
+            system architecture
+          </p>
+          <div className="mt-5 space-y-4">
+            {project.images.map((img, idx) => (
+              <div
+                key={idx}
+                className="overflow-hidden rounded-lg border border-hairline border-border bg-paper-warm"
+              >
+                <img
+                  src={img}
+                  alt="System architecture diagram"
+                  className="w-full"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {hasArch && (
         <div className="mt-10">
@@ -100,6 +123,9 @@ export default function ProjectDetail({ project }: { project: Project }) {
           )}
           {project.links.sheet && (
             <DetailLink href={project.links.sheet}>spreadsheet</DetailLink>
+          )}
+          {project.links.notion && (
+            <DetailLink href={project.links.notion}>notion</DetailLink>
           )}
         </div>
       )}

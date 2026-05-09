@@ -22,7 +22,8 @@
       "Bash(git remote *)",
       "Bash(git commit *)",
       "Bash(git checkout *)",
-      "Bash(git merge *)"
+      "Bash(git merge *)",
+      "Bash(cp /Users/danara/Vibecoding/Danara-Website/usecase.png /Users/danara/Vibecoding/Danara-Website/.claude/worktrees/friendly-tesla-0d9310/public/nordstrom-architecture.png && ls -lh /Users/danara/Vibecoding/Danara-Website/.claude/worktrees/friendly-tesla-0d9310/public/nordstrom-architecture.png)"
     ]
   }
 }

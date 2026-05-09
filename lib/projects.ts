@@ -101,6 +101,7 @@ export const projects: Project[] = [
       notion:
         "https://www.notion.so/Danara-s-AI-Projects-Portfolio-73fda0197f564f80820f1c0fa8950cea",
     },
+    images: ["/nordstrom-architecture.png"],
     architecture: {
       nodes: [
         { id: "nordstrom", label: "Nordstrom", kind: "api" },
