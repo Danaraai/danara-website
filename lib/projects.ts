@@ -33,7 +33,7 @@ export type Project = {
   context: string;
   problem: string;
   built: string;
-  outcome: string;
+  outcome?: string;
   role?: string;
   stack: string[];
   tags?: Tag[];
