@@ -186,7 +186,7 @@ export const projects: Project[] = [
     links: {
       demo: "https://neuroquest-psi.vercel.app/",
     },
-    images: ["/neuroquest-ui.png"],
+    images: ["/neuroquest-architecture.png", "/neuroquest-ui.png"],
     architecture: { nodes: [], edges: [] },
   },
   {
