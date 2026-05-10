@@ -44,7 +44,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
         </p>
       )}
 
-      <Section label={project.id === "neuroquest" ? "context" : "problem"}>{project.problem}</Section>
+      <Section label="problem">{project.problem}</Section>
       <Section label="what was built">{project.built}</Section>
       {project.outcome && <Section label="outcome">{project.outcome}</Section>}
 
@@ -53,7 +53,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
       {project.images && project.images.length > 0 && (
         <div className="mt-10">
           <p className="font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">
-            {project.id === "neuroquest" ? "ui" : "system architecture"}
+            system architecture
           </p>
           <div className="mt-5 space-y-4">
             {project.images.map((img, idx) => (
