@@ -181,7 +181,7 @@ export const projects: Project[] = [
       "Fireworks AI",
       "Spaced repetition",
       "Vercel",
-      "Claude",
+      "Claude Code",
     ],
     links: {
       demo: "https://neuroquest-psi.vercel.app/",
