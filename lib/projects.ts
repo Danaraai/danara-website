@@ -160,7 +160,7 @@ export const projects: Project[] = [
     id: "neuroquest",
     title: "Neuroquest — Duolingo for Computational Neuroscience",
     pillar: "apps",
-    year: "2025 — 2026",
+    year: "2026",
     context: "side project",
     tags: [
       { label: "AI-coded app", color: "#9B7AE5" },
@@ -184,7 +184,7 @@ export const projects: Project[] = [
       "Claude Code",
     ],
     links: {
-      demo: "https://neuroquest-psi.vercel.app/",
+      demo: "https://neuroquest-psi.vercel.app/home",
     },
     images: ["/neuroquest-architecture.png", "/neuroquest-ui.png"],
     architecture: { nodes: [], edges: [] },

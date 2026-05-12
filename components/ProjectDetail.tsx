@@ -33,9 +33,22 @@ export default function ProjectDetail({ project }: { project: Project }) {
         <span>{project.context}</span>
       </div>
 
-      <h2 className="mt-3 font-serif text-[34px] font-light leading-[1.12] tracking-[-0.4px] text-ink md:text-[40px]">
-        {project.title}
-      </h2>
+      <div className="mt-3 flex items-baseline gap-3 flex-wrap">
+        <h2 className="font-serif text-[34px] font-light leading-[1.12] tracking-[-0.4px] text-ink md:text-[40px]">
+          {project.title}
+        </h2>
+        {project.id === "neuroquest" && project.links.demo && (
+          <a
+            href={project.links.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-[13px] text-ink underline decoration-ink/30 underline-offset-[5px] transition hover:decoration-ink"
+          >
+            visit
+            <span aria-hidden>↗</span>
+          </a>
+        )}
+      </div>
 
       {project.role && (
         <p className="mt-3 font-mono text-[11px] uppercase tracking-eyebrow text-ink-muted">
