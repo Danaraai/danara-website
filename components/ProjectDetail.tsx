@@ -42,10 +42,10 @@ export default function ProjectDetail({ project }: { project: Project }) {
             href={project.links.demo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1 text-[13px] text-ink underline decoration-ink/30 underline-offset-[5px] transition hover:decoration-ink"
+            className="inline-flex items-baseline gap-0.5 text-[13px] text-ink underline decoration-ink/30 underline-offset-[5px] transition hover:decoration-ink"
           >
-            visit
-            <span aria-hidden>↗</span>
+            {project.links.demo.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+            <span aria-hidden className="text-[10px]">↗</span>
           </a>
         )}
       </div>
